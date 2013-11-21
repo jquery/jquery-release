@@ -85,7 +85,7 @@ Which type of issue tracker is being used for the project. Must be either
 If using Trac, this defines which report will produce a list of contributors
 for a specific release.
 
-See [docs/track-contributors.sql](docs/track-contributors.sql) for the SQL
+See [docs/trac-contributors.sql](docs/trac-contributors.sql) for the SQL
 necessary to create the Trac report.
 
 ### Other Methods
