@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "colors": "0.6.2",
+    "shelljs": "0.2.6"
+  },
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-contrib-jshint": "~0.7.2"
+  }
+}

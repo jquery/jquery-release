@@ -1,0 +1,27 @@
+Usage: node release.js [--pre-release=version] [--branch=branch] --remote=repo
+
+OPTIONS
+	--pre-release=version
+		Creates a pre-release instead of a stable release. Since the
+		version number can't be determined automatically, it must be
+		provided, and must be a valid semver.
+
+	--branch=branch
+		Specifies which branch to create the release from.
+		Defaults to master.
+
+	--remote=repo
+		Specifies the remote repository to work with. There are three
+		ways to specify the remote:
+
+		- GitHub Repository (user/repo)
+		- File System (/path/to/repo)
+		- URL (http://mydomain/repo.git)
+
+		Regardless of which method is used to specify the remote, the
+		part after the last slash must match the repo name on GitHub.
+
+TEST RELEASES
+	To test the release process without affecting any official
+	repositories, specificy a custom remote, such as your own fork of
+	the repository.
