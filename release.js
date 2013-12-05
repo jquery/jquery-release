@@ -33,7 +33,10 @@ commonTasks = [
 
 	Release._section( "pushing tag" ),
 	Release.confirmReview,
-	Release._pushRelease
+	Release._pushRelease,
+
+	Release._section( "publishing to jQuery CDN" ),
+	Release._pushToCdn
 ];
 
 stableTasks = [
