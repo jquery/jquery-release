@@ -45,9 +45,11 @@ stableTasks = [
 
 	Release._section( "Publishing artifacts" ),
 	Release._pushToCdn,
-	function() {
+	function( done ) {
 		if ( typeof Release.publishArtifacts === "function" ) {
-			Release.publishArtifacts();
+			Release.publishArtifacts( done );
+		} else {
+			done();
 		}
 	},
 
