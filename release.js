@@ -40,6 +40,14 @@ stableTasks = [
 	Release._section( "updating branch version" ),
 	Release._updateBranchVersion,
 
+	Release._section( "Publishing artifacts" ),
+	Release._pushToCdn,
+	function() {
+		if ( typeof Release.publishArtifacts === "function" ) {
+			Release.publishArtifacts();
+		}
+	},
+
 	function() {
 		Release._section( "pushing " + Release.branch )();
 	},
