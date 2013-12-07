@@ -34,21 +34,14 @@ commonTasks = [
 	Release._section( "pushing tag" ),
 	Release.confirmReview,
 	Release._pushRelease
+
+	Release._section( "Publishing artifacts" ),
+	Release._pushToCdn
 ];
 
 stableTasks = [
 	Release._section( "updating branch version" ),
 	Release._updateBranchVersion,
-
-	Release._section( "Publishing artifacts" ),
-	Release._pushToCdn,
-	function( done ) {
-		if ( typeof Release.publishArtifacts === "function" ) {
-			Release.publishArtifacts( done );
-		} else {
-			done();
-		}
-	},
 
 	function() {
 		Release._section( "pushing " + Release.branch )();
