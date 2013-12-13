@@ -7,6 +7,11 @@ var commonTasks, stableTasks,
 			for ( var prop in props ) {
 				Release[ prop ] = props[ prop ];
 			}
+		},
+
+		complete: function() {
+			console.log( "Release complete." );
+			console.log( "Please review the project-specific release checklist." );
 		}
 	};
 
@@ -58,13 +63,8 @@ stableTasks = [
 
 Release._walk( commonTasks, function() {
 	if ( Release.preRelease ) {
-		return complete();
+		return Release.complete();
 	}
 
-	Release._walk( stableTasks, complete );
+	Release._walk( stableTasks, Release.complete );
 });
-
-function complete() {
-	console.log( "Release complete." );
-	console.log( "Please review the project-specific release checklist." );
-}
