@@ -43,6 +43,16 @@ stableTasks = [
 	Release._section( "updating branch version" ),
 	Release._updateBranchVersion,
 
+	Release._section( "Publishing artifacts" ),
+	Release._pushToCdn,
+	function( done ) {
+		if ( typeof Release.publishArtifacts === "function" ) {
+			Release.publishArtifacts( done );
+		} else {
+			done();
+		}
+	},
+
 	function() {
 		Release._section( "pushing " + Release.branch )();
 	},
@@ -58,13 +68,15 @@ stableTasks = [
 
 Release._walk( commonTasks, function() {
 	if ( Release.preRelease ) {
-		return complete();
+		return Release.complete();
 	}
 
-	Release._walk( stableTasks, complete );
+	Release._walk( stableTasks, Release.complete );
 });
 
-function complete() {
-	console.log( "Release complete." );
-	console.log( "Please review the project-specific release checklist." );
-}
+Release.define({
+	complete: function() {
+		console.log( "Release complete." );
+		console.log( "Please review the project-specific release checklist." );
+	}
+});
