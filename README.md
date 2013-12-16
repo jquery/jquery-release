@@ -25,7 +25,7 @@ actions, such as publishing to npm, don't occur for test runs.
 
 ### Full Usage Options
 
-See the [usage documenation](/docs/usage.txt) for the full set of options.
+See the [usage documentation](/docs/usage.txt) for the full set of options.
 You can also run the script with no parameters to see the usage.
 
 
