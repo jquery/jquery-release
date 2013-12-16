@@ -7,6 +7,10 @@ var commonTasks, stableTasks,
 			for ( var prop in props ) {
 				Release[ prop ] = props[ prop ];
 			}
+		},
+		complete: function() {
+			console.log( "Release complete." );
+			console.log( "Please review the project-specific release checklist." );
 		}
 	};
 
@@ -62,11 +66,4 @@ Release._walk( commonTasks, function() {
 	}
 
 	Release._walk( stableTasks, Release.complete );
-});
-
-Release.define({
-	complete: function() {
-		console.log( "Release complete." );
-		console.log( "Please review the project-specific release checklist." );
-	}
 });
