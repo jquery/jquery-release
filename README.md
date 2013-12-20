@@ -75,6 +75,11 @@ creating the tag.
 Defines the shell for the changelog. The changelog is created by concatenating
 the shell, the commit log, and the issue list.
 
+#### tracMilestone()
+
+If using Trac, return a different milestone to be used in the queries to
+generate a changelog and list of contributors. Defaults to `newVersion`.
+
 #### issueTracker
 
 Which type of issue tracker is being used for the project. Must be either
