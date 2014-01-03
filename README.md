@@ -13,7 +13,7 @@ created, you should always start from a new clone of this repository.
 ```sh
 git clone git@github.com:jquery/jquery-release.git
 cd jquery-release
-node jquery-release.js --remote=jquery/<project-name>
+node release.js --remote=jquery/<project-name>
 ```
 
 ### Testing the Release Script
