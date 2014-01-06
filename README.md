@@ -192,6 +192,10 @@ The previous release version (used for determining what changed).
 
 The version that will be set in `package.json` after the release.
 
+#### npmPublish
+
+Set to `true` to publish a release via npm. Defaults to `false`.
+
 #### tagTime
 
 Timestamp for the release tag.

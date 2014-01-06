@@ -43,7 +43,10 @@ commonTasks = [
 	Release._section( "publishing to jQuery CDN" ),
 	Release._copyCdnArtifacts,
 	Release.confirmReview,
-	Release._pushToCdn
+	Release._pushToCdn,
+
+	Release._section( "publishing to npm" ),
+	Release._publishNpm
 ];
 
 stableTasks = [
