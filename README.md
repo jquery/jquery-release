@@ -88,6 +88,11 @@ for a specific release.
 See [docs/trac-contributors.sql](docs/trac-contributors.sql) for the SQL
 necessary to create the Trac report.
 
+#### tracMilestone()
+
+If using Trac, return a different milestone to be used in the queries to
+generate a changelog and list of contributors. Defaults to `newVersion`.
+
 ### Other Methods
 
 #### define( props )
