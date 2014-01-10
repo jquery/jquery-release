@@ -41,6 +41,8 @@ commonTasks = [
 	Release._pushRelease,
 
 	Release._section( "publishing to jQuery CDN" ),
+	Release._copyCdnArtifacts,
+	Release.confirmReview,
 	Release._pushToCdn
 ];
 
