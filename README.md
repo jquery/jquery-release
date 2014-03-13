@@ -93,6 +93,14 @@ for a specific release.
 See [docs/trac-contributors.sql](docs/trac-contributors.sql) for the SQL
 necessary to create the Trac report.
 
+#### exports.dependencies
+
+*Note: This is a property on the `exports` object in `build/release.js`.*
+
+An array of release-specific dependencies. Dependencies can be listed here
+instead of in `devDependencies` in `package.json` so that contributors don't
+need to install dependencies which are only necessary for the release.
+
 ### Other Methods
 
 #### define( props )
