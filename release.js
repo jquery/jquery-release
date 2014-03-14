@@ -28,6 +28,7 @@ commonTasks = [
 	Release._section( "setting up repo" ),
 	Release._cloneRepo,
 	Release._checkRepoState,
+	Release._checkNpmCredentials,
 
 	Release._section( "calculating versions" ),
 	Release._getVersions,
