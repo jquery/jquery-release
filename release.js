@@ -23,6 +23,7 @@ commonTasks = [
 	Release._parseArguments,
 	Release.confirm,
 
+	Release._checkNpmCredentials,
 	Release._createReleaseDirectory,
 
 	Release._section( "setting up repo" ),
