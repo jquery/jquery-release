@@ -20,6 +20,7 @@ fs.readdirSync( "./lib" ).forEach(function( module ) {
 });
 
 commonTasks = [
+	Release._checkExecutables,
 	Release._parseArguments,
 	Release.confirm,
 
