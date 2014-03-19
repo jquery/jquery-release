@@ -23,6 +23,40 @@ repository. The script is smart enough to detect if you're using an
 official repository and adjust which actions are taken so that undesired
 actions, such as publishing to npm, don't occur for test runs.
 
+When working on features of this script, adapt the following to simplify
+testing a bit, replacing the paths for `project` and `cdn`:
+
+```bash
+#!/bin/sh -e
+# uncomment next line to debug this script
+# set -x
+project=/path/to/fake-project
+cdn=/path/to/fake-cdn
+
+cd $project
+git checkout master
+set +e
+git tag -d 0.0.1
+set -e
+git reset --hard safe
+git checkout asdf
+cd -
+
+cd $cdn
+git push -f
+cd -
+
+rm -rf __release/
+node release.js --remote=$project
+```
+
+You need local clones of [fake-project](https://github.com/jquery/fake-project)
+and [fake-cdn](https://github.com/jquery/fake-cdn), then update both variables
+to point to those.
+
+Save as `test-release.sh` in the checkout of this repo, make  it executable
+with `chmod +x test-release.sh`, then run with `./test-release.sh`.
+
 ### Full Usage Options
 
 See the [usage documentation](/docs/usage.txt) for the full set of options.
