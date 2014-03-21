@@ -49,7 +49,7 @@ commonTasks = [
 
 	function() {
 		if ( Release.npmPublish ) {
-			Release._section( "publishing to npm" )()
+			Release._section( "publishing to npm" )();
 		}
 	},
 	Release._publishNpm
