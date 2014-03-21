@@ -114,6 +114,11 @@ the shell, the commit log, and the issue list.
 If using Trac, return a different milestone to be used in the queries to
 generate a changelog and list of contributors. Defaults to `newVersion`.
 
+#### npmTags()
+
+An array of tags to apply to the npm release. Every release must contain at least
+one tag.
+
 #### issueTracker
 
 Which type of issue tracker is being used for the project. Must be either
