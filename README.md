@@ -141,9 +141,10 @@ need to install dependencies which are only necessary for the release.
 
 Defines new properties and methods to add to the `Release` object.
 
-#### abort( msg )
+#### abort( msg [, error ] )
 
-Aborts the release and prints the message.
+Aborts the release and prints the message. If an error object is provided, it is
+used for the stack trace, otherwise the current call stack is used.
 
 #### exec( command, options )
 
