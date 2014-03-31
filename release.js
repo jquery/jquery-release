@@ -50,6 +50,8 @@ commonTasks = [
 				Release.confirmReview,
 				Release._pushToCdn
 			], fn );
+		} else {
+			fn();
 		}
 	},
 
