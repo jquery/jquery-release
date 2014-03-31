@@ -235,6 +235,10 @@ The previous release version (used for determining what changed).
 
 The version that will be set in `package.json` after the release.
 
+#### cdnPublish
+
+Set to `false` to prevent publishing to the jQuery CDN. Defaults to `true`.
+
 #### npmPublish
 
 Set to `true` to publish a release via npm. Defaults to `false`.
