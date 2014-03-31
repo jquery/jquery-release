@@ -42,10 +42,16 @@ commonTasks = [
 	Release.confirmReview,
 	Release._pushRelease,
 
-	Release._section( "publishing to jQuery CDN" ),
-	Release._copyCdnArtifacts,
-	Release.confirmReview,
-	Release._pushToCdn,
+	function( fn ) {
+		if ( Release.cdnPublish ) {
+			Release._section( "publishing to jQuery CDN" )();
+			Release._walk([
+				Release._copyCdnArtifacts,
+				Release.confirmReview,
+				Release._pushToCdn
+			], fn );
+		}
+	},
 
 	function() {
 		if ( Release.npmPublish ) {
