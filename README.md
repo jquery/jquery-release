@@ -201,7 +201,8 @@ Saves `package` to `package.json`, preserving indentation style.
 
 #### isTest
 
-Whether this is a test release.
+Whether this is a test release. Test releases don't publish to npm and use the
+fake-cdn project instead of publishing to the real CDN.
 
 #### project
 
