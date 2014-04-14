@@ -202,6 +202,16 @@ Gets the contents of `package.json` as an object.
 
 Saves `package` to `package.json`, preserving indentation style.
 
+#### walk( methods, done )
+
+Executes the array of `methods` (minimum one element) step by step. For any
+given method, if that method accepts arguments (`method.length > 0`), it will
+pass a callback that the method needs to execute when done, making the method
+call async. Otherwise the method is assumed to be sync and the next method runs
+immediately.
+
+Once all methods are executed, the `done` callback is executed.
+
 ### Other Properties
 
 #### isTest
