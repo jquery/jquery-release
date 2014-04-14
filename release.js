@@ -45,7 +45,7 @@ commonTasks = [
 	function( fn ) {
 		if ( Release.cdnPublish ) {
 			Release._section( "publishing to jQuery CDN" )();
-			Release._walk([
+			Release.walk([
 				Release._copyCdnArtifacts,
 				Release.confirmReview,
 				Release._pushToCdn
@@ -80,10 +80,10 @@ stableTasks = [
 	Release._gatherContributors
 ];
 
-Release._walk( commonTasks, function() {
+Release.walk( commonTasks, function() {
 	if ( Release.preRelease ) {
 		return Release.complete();
 	}
 
-	Release._walk( stableTasks, Release.complete );
+	Release.walk( stableTasks, Release.complete );
 });
