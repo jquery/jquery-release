@@ -116,8 +116,8 @@ generate a changelog and list of contributors. Defaults to `newVersion`.
 
 #### npmTags()
 
-An array of tags to apply to the npm release. Every release must contain at least
-one tag.
+A function that returns an array of tags to apply to the npm release.
+Every release must contain at least one tag.
 
 #### issueTracker
 
