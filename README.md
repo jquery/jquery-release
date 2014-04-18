@@ -14,7 +14,7 @@ node release.js --remote=jquery/<project-name>
 
 ### Testing the Release Script
 
-You can do a test run of the release script by using a different remote repository. The script is smart enough to detect if you're using an official repository and adjust which actions are taken so that undesired actions, such as publishing to npm, don't occur for test runs.
+You can do a test run of the release script by using a different remote repository. **It is recommended to perform tests from a fresh clone of the project being released.** The script is smart enough to detect if you're using an official repository and adjust which actions are taken so that undesired actions, such as publishing to npm, don't occur for test runs.
 
 When working on features of this script, adapt the following to simplify testing a bit, replacing the paths for `project` and `cdn`:
 
