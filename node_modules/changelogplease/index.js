@@ -61,7 +61,7 @@ Changelog.prototype.sort = function( commits ) {
 	}
 
 	// Sort commits so that they're grouped by component
-	var component = /^(.+):/;
+	var component = /^([^:]+):/;
 	return commits.sort(function( a, b ) {
 		var aMatch = a.match( component ),
 			bMatch = b.match( component );
