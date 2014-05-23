@@ -74,11 +74,13 @@ Release.define({
 
 ### Required/Recommended Configuration
 
-#### checkRepoState()
+#### checkRepoState( [ callback ] )
 
 Performs any project-specific checks to ensure the repository is in a good state to be released. For example, there is a built-in check to ensure that `AUTHORS.txt` is up-to-date.
 
 This method has no return value. If a project-specific check fails, the script should use `Release.abort()` to prevent the release from continuing.
+
+This method may be synchronous or asynchronous depending on the presence of `callback`. If present, the callback must be invoked.
 
 #### generateArtifacts( callback )
 
