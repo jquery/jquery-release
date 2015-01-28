@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "changelogplease": "1.1.1",
-    "colors": "0.6.2",
+    "colors": "1.0.3",
     "semver": "2.2.1",
     "shelljs": "0.2.6",
     "which": "1.0.5"
