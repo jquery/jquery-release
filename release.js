@@ -61,6 +61,15 @@ commonTasks = [
 		}
 	},
 
+	function( fn ) {
+		if ( Release.dist ) {
+			Release._section( "additional custom distribution" );
+			Release.dist( fn );
+		} else {
+			fn();
+		}
+	},
+
 	function() {
 		if ( Release.npmPublish ) {
 			Release._section( "publishing to npm" )();
