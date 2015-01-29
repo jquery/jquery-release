@@ -174,6 +174,11 @@ Executes the array of `methods` (minimum one element) step by step. For any give
 
 Once all methods are executed, the `done` callback is executed.
 
+#### dist( callback )
+
+This function is available in case the project requires more distribution than what is provided.
+It is called after building, but before publishing to npm.
+
 ### Other Properties
 
 #### isTest
