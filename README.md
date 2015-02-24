@@ -14,6 +14,8 @@ node release.js --remote=jquery/<project-name>
 
 ### Testing the Release Script
 
+***This only applies to those with access to some private repos. You can also use any other repo with a release script.***
+
 You can do a test run of the release script by using a different remote repository. **It is recommended to perform tests from a fresh clone of the project being released.** The script is smart enough to detect if you're using an official repository and adjust which actions are taken so that undesired actions, such as publishing to npm, don't occur for test runs.
 
 When working on features of this script, adapt the following to simplify testing a bit, replacing the paths for `project` and `cdn`:
@@ -42,7 +44,7 @@ rm -rf __release/
 node release.js --remote=$project
 ```
 
-You need local clones of [fake-project](https://github.com/jquery/fake-project) and [fake-cdn](https://github.com/jquery/fake-cdn), then update both variables to point to those.
+You need local clones of [fake-project](https://github.com/jquery/fake-project) and [fake-cdn](https://github.com/jquery/fake-cdn) (private, see note above), then update both variables to point to those.
 
 Save as `test-release.sh` in the checkout of this repo, make  it executable with `chmod +x test-release.sh`, then run with `./test-release.sh`.
 
