@@ -221,7 +221,7 @@ The version that will be set in `package.json` after the release.
 
 #### cdnPublish
 
-Set to `false` to prevent publishing to the jQuery CDN. Defaults to `true`.
+Which directory contains files to publish to the jQuery CDN. Set to `false` to prevent publishing to the jQuery CDN. Defaults to `"dist/cdn"`.
 
 #### npmPublish
 
