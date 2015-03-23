@@ -2,7 +2,7 @@
   "dependencies": {
     "chalk": "1.0.0",
     "changelogplease": "1.1.1",
-    "github-request": "1.2.2",
+    "github-request": "1.2.3",
     "semver": "2.2.1",
     "shelljs": "0.2.6",
     "which": "1.0.5"
