@@ -88,6 +88,13 @@ function request(settings, data, callback) {
 }
 
 function requestAll(settings, callback) {
+
+	// Force the request to use a page size of 100 for optimal performance
+	var parsed = url.parse(settings.path, true);
+	delete parsed.search;
+	parsed.query.per_page = 100;
+	settings.path = url.format(parsed);
+
 	request(settings, function(error, data, meta) {
 		if (error) {
 			return callback(error);
