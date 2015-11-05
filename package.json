@@ -13,5 +13,7 @@
   },
   "scripts": {
     "test": "grunt"
-  }
+  },
+  "repository": "jquery/jquery-release",
+  "license": "MIT"
 }
