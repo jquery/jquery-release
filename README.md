@@ -40,7 +40,7 @@ cd $cdn
 git push -f
 cd -
 
-rm -rf __release/
+npm run clean
 node release.js --remote=$project
 ```
 
