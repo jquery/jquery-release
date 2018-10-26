@@ -1,6 +1,9 @@
-Usage: node release.js [--pre-release=version] [--branch=branch] --remote=repo
+Usage: node release.js [--dry-run] [--pre-release=version] [--branch=branch] --remote=repo
 
 OPTIONS
+	--dry-run
+		Executes in test mode, skipping npm publish and CDN push.
+
 	--pre-release=version
 		Creates a pre-release instead of a stable release. Since the
 		version number can't be determined automatically, it must be
