@@ -16,7 +16,7 @@ var commonTasks, stableTasks,
 	};
 
 fs.readdirSync( "./lib" ).forEach(function( filename ) {
-	if ( filename.slice( -3 ) === ".js" ) {
+	if ( filename.endsWith( ".js" ) ) {
 		require( "./lib/" + filename )( Release );
 	}
 });
