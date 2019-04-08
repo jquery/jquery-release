@@ -15,8 +15,10 @@ var commonTasks, stableTasks,
 		}
 	};
 
-fs.readdirSync( "./lib" ).forEach(function( module ) {
-	require( "./lib/" + module )( Release );
+fs.readdirSync( "./lib" ).forEach(function( filename ) {
+	if ( filename.endsWith( ".js" ) ) {
+		require( "./lib/" + filename )( Release );
+	}
 });
 
 commonTasks = [
