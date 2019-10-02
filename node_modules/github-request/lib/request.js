@@ -34,7 +34,7 @@ function request(settings, data, callback) {
 	}, settings);
 	settings.headers = extend({
 		"user-agent": userAgent,
-		"content-length": typeof data === "string" ? data.length : 0
+		"content-length": typeof data === "string" ? Buffer.byteLength(data, "utf8") : 0
 	}, settings.headers || {});
 
 	var req = https.request(extend({
