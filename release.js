@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+"use strict";
+
 var commonTasks, stableTasks,
 	fs = require( "fs" ),
 	Release = {
@@ -15,11 +17,11 @@ var commonTasks, stableTasks,
 		}
 	};
 
-fs.readdirSync( "./lib" ).forEach(function( filename ) {
+fs.readdirSync( "./lib" ).forEach( function( filename ) {
 	if ( filename.endsWith( ".js" ) ) {
 		require( "./lib/" + filename )( Release );
 	}
-});
+} );
 
 commonTasks = [
 	Release._checkExecutables,
@@ -53,7 +55,7 @@ commonTasks = [
 	function( fn ) {
 		if ( Release.cdnPublish ) {
 			Release._section( "publishing to jQuery CDN" )();
-			Release.walk([
+			Release.walk( [
 				Release._copyCdnArtifacts,
 				Release.confirmReview,
 				Release._pushToCdn
@@ -97,4 +99,4 @@ Release.walk( commonTasks, function() {
 	}
 
 	Release.walk( stableTasks, Release.complete );
-});
+} );

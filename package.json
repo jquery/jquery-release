@@ -1,18 +1,18 @@
 {
   "dependencies": {
-    "chalk": "1.0.0",
-    "changelogplease": "1.1.1",
-    "github-request": "1.2.3",
-    "semver": "2.2.1",
+    "chalk": "2.4.2",
+    "changelogplease": "1.2.0",
+    "github-request": "1.2.4",
+    "semver": "6.3.0",
     "shelljs": "0.2.6",
-    "which": "1.0.5"
+    "which": "1.3.1"
   },
   "devDependencies": {
-    "grunt": "0.4.1",
-    "grunt-contrib-jshint": "~0.7.2"
+    "eslint": "6.5.1",
+    "eslint-config-jquery": "2.0.0"
   },
   "scripts": {
-    "test": "grunt",
+    "test": "eslint .",
     "clean": "rm -rf __release/"
   },
   "repository": "jquery/jquery-release",
