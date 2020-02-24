@@ -2,6 +2,12 @@
 
 "use strict";
 
+// Stop the release process if any of the asynchronous operations fails.
+process.on( "unhandledRejection", reason => {
+	console.error( "Unhandled rejection:", reason );
+	throw reason;
+} );
+
 var commonTasks, stableTasks,
 	fs = require( "fs" ),
 	Release = {
