@@ -41,7 +41,7 @@ git push -f
 cd -
 
 npm run clean
-env TEST_REMOTE=$cdn node --dry-run release.js --remote=$project
+env TEST_REMOTE=$cdn node release.js --dry-run --remote=$project
 ```
 
 Save as `test-release.sh` in the checkout of this repo, make  it executable with `chmod +x test-release.sh`, then run with `./test-release.sh`.
