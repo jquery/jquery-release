@@ -11,7 +11,7 @@ OPTIONS
 
 	--branch=branch
 		Specifies which branch to create the release from.
-		Defaults to master.
+		Defaults to main.
 
 	--remote=repo
 		Specifies the remote repository to work with. There are three
