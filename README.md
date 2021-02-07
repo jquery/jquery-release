@@ -28,7 +28,7 @@ project=/path/to/fake-project
 cdn=/path/to/fake-cdn
 
 cd $project
-git checkout master
+git checkout main
 set +e
 git tag -d 0.0.1
 set -e
