@@ -233,4 +233,4 @@ Timestamp for the release tag.
 
 #### branch
 
-Which branch the release is being generated from.
+Which branch the release is being generated from (defaults to `main`).
