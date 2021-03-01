@@ -34,10 +34,10 @@ commonTasks = [
 	Release._parseArguments,
 	Release.confirm,
 
-	Release._createReleaseDirectory,
-
 	Release._section( "setting up repo" ),
+	Release._createReleaseDirectory,
 	Release._cloneRepo,
+	Release._loadReleaseScript,
 	Release._checkRepoState,
 	Release._checkNpmCredentials,
 
