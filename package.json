@@ -5,7 +5,7 @@
     "enquirer": "2.3.6",
     "github-request": "1.2.4",
     "semver": "7.3.4",
-    "shelljs": "0.8.4",
+    "shelljs": "0.8.5",
     "which": "2.0.2"
   },
   "devDependencies": {
