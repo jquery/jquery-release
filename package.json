@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "chalk": "4.1.0",
+    "chalk": "4.1.2",
     "changelogplease": "1.2.0",
     "enquirer": "2.3.6",
     "github-request": "1.2.4",
-    "semver": "7.3.4",
+    "semver": "7.3.8",
     "shelljs": "0.8.5",
-    "which": "2.0.2"
+    "which": "3.0.0"
   },
   "devDependencies": {
-    "eslint": "7.21.0",
+    "eslint": "8.35.0",
     "eslint-config-jquery": "3.0.0"
   },
   "scripts": {
