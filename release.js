@@ -54,10 +54,6 @@ commonTasks = [
 	Release._section( "gathering contributors" ),
 	Release._gatherContributors,
 
-	Release._section( "pushing tag" ),
-	Release.confirmReview,
-	Release._pushRelease,
-
 	function( fn ) {
 		if ( Release.cdnPublish ) {
 			Release._section( "publishing to jQuery CDN" )();
@@ -70,6 +66,10 @@ commonTasks = [
 			fn();
 		}
 	},
+
+	Release._section( "pushing tag" ),
+	Release.confirmReview,
+	Release._pushRelease,
 
 	function( fn ) {
 		if ( Release.dist ) {
