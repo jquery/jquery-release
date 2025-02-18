@@ -1,6 +1,7 @@
 # jQuery Project Release Automation
 
-This script automates releases for all jQuery projects. It is designed to create consistency between projects and reduce the burden of maintaining individual release scripts.
+> [!IMPORTANT]
+> This script is no longer used. It has been archived for historical purposes.
 
 ## Creating a Release
 
