@@ -4,7 +4,7 @@
     "changelogplease": "1.2.0",
     "enquirer": "2.3.6",
     "github-request": "1.2.4",
-    "semver": "7.3.8",
+    "semver": "7.5.2",
     "shelljs": "0.8.5",
     "which": "3.0.0"
   },
