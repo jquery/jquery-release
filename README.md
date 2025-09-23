@@ -1,7 +1,7 @@
 # jQuery Project Release Automation
 
 > [!IMPORTANT]
-> This script is no longer used. It has been archived for historical purposes.
+> The only project still using jQuery Release is jQuery UI. All other projects have moved to using [release-it](https://github.com/release-it/release-it).
 
 ## Creating a Release
 
