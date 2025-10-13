@@ -1,6 +1,9 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches-ignore: "dependabot/**"
 
 jobs:
   build:
@@ -8,28 +11,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        NODE_VERSION: [16.x]
+        NODE_VERSION: [24.x]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
-    - name: Cache
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ matrix.NODE_VERSION }}-npm-lock-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-${{ matrix.NODE_VERSION }}-npm-lock-
+      - name: Use Node.js ${{ matrix.NODE_VERSION }}
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: ${{ matrix.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
 
-    - name: Use Node.js ${{ matrix.NODE_VERSION }}
-      uses: actions/setup-node@v2.1.2
-      with:
-        node-version: ${{ matrix.NODE_VERSION }}
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Install dependencies
-      run: |
-        npm install
-
-    - name: Run tests
-      run: |
-        npm test
+      - name: Run tests
+        run: npm test
