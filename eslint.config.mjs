@@ -18,12 +18,10 @@ export default [
 		languageOptions: {
 			ecmaVersion: 2025,
 			sourceType: "script",
-
 			globals: {
 				...globals.node
 			}
 		},
-
 		rules: {
 			strict: [ "error", "global" ]
 		}
@@ -31,7 +29,6 @@ export default [
 
 	{
 		files: [ "*.mjs" ],
-
 		languageOptions: {
 			sourceType: "module"
 		}
